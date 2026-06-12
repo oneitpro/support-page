@@ -91,27 +91,25 @@ body {
 /* ════════════════════════════════
    SCENARIO TABS
 ════════════════════════════════ */
-.tab-row { overflow: hidden; margin-bottom: 14px; }
+.tab-table { width: 710px; table-layout: fixed; border-collapse: separate; border-spacing: 8px 0; margin: 0 0 14px; }
+.tab-td { width: 226px; vertical-align: top; padding: 0; }
 .tab-btn {
-  float: left;
-  width: 32%;
-  margin-right: 2%;
+  display: block;
+  width: 226px;
   border: 2px solid #dddddd;
   border-radius: 8px;
-  padding: 11px 14px;
+  padding: 10px 12px;
   cursor: pointer;
   background: #fafafa;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
-  transition: border-color .15s;
 }
-.tab-btn:last-child { margin-right: 0; }
 .tab-btn:hover { border-color: #2E6DB4; }
 .tab-btn.active { border-color: #2E6DB4; background: #eef4fc; }
-.tab-btn .tb-icon { font-size: 20px; display: block; margin-bottom: 5px; }
-.tab-btn .tb-title { font-size: 13px; font-weight: 800; color: #1a1a1a; display: block; }
+.tab-btn .tb-icon { font-size: 18px; display: block; margin-bottom: 4px; }
+.tab-btn .tb-title { font-size: 12px; font-weight: 800; color: #1a1a1a; display: block; }
 .tab-btn.active .tb-title { color: #2E6DB4; }
-.tab-btn .tb-desc  { font-size: 11px; font-weight: 600; color: #888888; display: block; margin-top: 2px; }
+.tab-btn .tb-desc  { font-size: 10px; font-weight: 600; color: #888888; display: block; margin-top: 2px; }
 
 /* ════════════════════════════════
    TAB PANELS
@@ -309,24 +307,31 @@ body {
 
   <!-- SCENARIO SELECTOR -->
   <div class="section-label">Select Your Situation</div>
-  <div class="tab-row">
-    <button class="tab-btn active" onclick="switchTab('new', this)">
-      <span class="tb-icon">&#11015;&#65039;</span>
-      <span class="tb-title">First-time setup</span>
-      <span class="tb-desc">Never had the app before</span>
-    </button>
-    <button class="tab-btn" onclick="switchTab('reinstall', this)">
-      <span class="tb-icon">&#128260;</span>
-      <span class="tb-title">App not working / reinstall</span>
-      <span class="tb-desc">Already installed but having issues</span>
-    </button>
-    <button class="tab-btn" onclick="switchTab('email', this)">
-      <span class="tb-icon">&#9993;&#65039;</span>
-      <span class="tb-title">Email templates</span>
-      <span class="tb-desc">For One I.T. Pro technicians</span>
-    </button>
-    <div class="clearfix"></div>
-  </div>
+  <table class="tab-table">
+    <tr>
+      <td class="tab-td">
+        <button class="tab-btn active" onclick="switchTab('new', this)">
+          <span class="tb-icon">&#11015;&#65039;</span>
+          <span class="tb-title">First-time setup</span>
+          <span class="tb-desc">Never had the app before</span>
+        </button>
+      </td>
+      <td class="tab-td">
+        <button class="tab-btn" onclick="switchTab('reinstall', this)">
+          <span class="tb-icon">&#128260;</span>
+          <span class="tb-title">App not working / reinstall</span>
+          <span class="tb-desc">Already installed but having issues</span>
+        </button>
+      </td>
+      <td class="tab-td">
+        <button class="tab-btn" onclick="switchTab('email', this)">
+          <span class="tb-icon">&#9993;&#65039;</span>
+          <span class="tb-title">Email templates</span>
+          <span class="tb-desc">For One I.T. Pro technicians</span>
+        </button>
+      </td>
+    </tr>
+  </table>
 
   <div class="divider"></div>
 
